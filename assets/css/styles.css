@@ -75,13 +75,19 @@ html{
     color: var(--space-cadet);
     font-size: 14px;
     font-weight: 500;
+    transition: var(--default-transition);
 }
+
+.btn:hover { filter: saturate(1.05) brightness(1.05);}
+
+.btn-primary { background: var(--saffron); }
+
+.btn-secondary { background: var(--cultured);}
 
 /* Main */
 .container {
     position: relative;
     max-width: 1440px;
-    min-height: 100vh;
     margin: auto;
     background: var(--white);
     overflow: hidden;
