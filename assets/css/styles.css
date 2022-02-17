@@ -509,6 +509,215 @@ html{
     margin-bottom: 30px;
 }
 
+/*  Services  */
+
+.services {
+    padding: var(--py) var(--px);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+.service-card .card-number {
+    font-size: 42px;
+    font-family: "Monoton", cursive;
+    color: var(--saffron);
+}
+.service-card .card-heading {
+    color: var(--space-cadet);
+    font-size: var(--fs-3);
+    font-weight: 600;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+.service-card .card-text{
+    color: var(--rythm);
+    font-size: var(--fs-4);
+    line-height: 1.5;
+}
+
+/*  Products  */
+.product { padding: var(--py) var(--px); }
+.product .section-title {margin-bottom: 30px; }
+.product .section-text {margin-bottom: 60px; }
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.product-card .img-box{
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--default-transition);
+}
+
+.product-card:hover .product-img{ transform: scale(1.05);}
+
+.card-badge{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+    font-size: 14px;
+}
+
+.card-badge ion-icon{font-size: 13px;}
+
+.card-badge.green{
+    background: var(--pistachio);
+    color: var(--space-cadet);
+}
+.card-badge.red{
+    background: var(--red-orange-crayola);
+    color: var(--space-cadet);
+}
+.product-card .wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    background: var(--cultured);
+    margin-bottom: 15px;
+}
+.product-card .product-name{
+    color: var(--space-cadet);
+    font-size: var(--fs-3);
+    font-weight: 600;
+    padding-left: 15px;
+}
+.product-card .product-price{
+    background: var(--saffron);
+    height: 60px;
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--space-cadet);
+    font-size: 24px;
+    font-weight: 500;
+}
+.product-card .small{
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.product-card .product-text{
+    font-size: var(--fs-4);
+    color: var(--rythm);
+    line-height: 1.6;
+    letter-spacing: 0.4px;
+    margin-bottom: 15px;
+}
+
+.product-card .product-rating{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--saffron);
+}
+.product .btn-primary { margin-inline: auto; }
+
+/*  Testimonials  */
+
+.testimonials { padding: var(--py) var(--px) 120px; }
+.testimonials .section-title {margin-bottom: 15px; }
+.testimonials .section-text {margin-bottom: 50px; }
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 50px;
+}
+
+.testimonials-card .card-title{
+    color: var(--space-cadet);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.testimonials-rating{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+.testimonials-rating ion-icon { color: var(--saffron); }
+
+.testimonials-text {
+    font-size: var(--fs-4);
+    color: var(--rythm);
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.customer-img-box{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.customer-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.customer-name {
+    font-size: 14px;
+    color: var(--space-cadet);
+    font-weight: 600;
+}
+
+
+/*  Footer  */
+
+footer{
+    background: var(--space-cadet);
+    padding: 50px var(--px);
+}
+
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-link {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link ion-icon{
+    color: var(--cultured);
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+.social-link ion-icon:hover {color: var(--saffron); }
+
+.copyright {
+    font-size: 12px;
+    color: var(--rythm);
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
 
 
 
