@@ -57,7 +57,7 @@ html{
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar { width: 5px;}
 
 ::-webkit-scrollbar-track { background: var(--cultured); }
 
