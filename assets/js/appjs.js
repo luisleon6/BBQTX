@@ -1,37 +1,18 @@
-nombres = []
+$(document).ready(function(){
+    $('#box-form').submit(function(){
+        var txt_user = $('#txt-user').val();
+        var txt_password = $('#txt-password').val();
 
-function insertarNombre(evt){
-    evt.preventDefault();
+        //almacenar los valores dentro de localstorage
+        localStorage.setItem('usuario',txt_user);
+        localStorage.setItem('password',txt_password);
+    });
 
-    let nombre = document.getElementById("nombre").value;
+    var txt_user = localStorage.getItem('usuario');
+    var txt_password =localStorage.getItem('password');
 
-    if (nombre == ""){
-        alert("El nombre no puede estar vacio")
+    if(txt_user != null && txt_user != 'undefined'){
+        //llamamos al documento sesion.html
+        window.location = 'sesion.html';
     }
-    else if(!existeNombre(nombre)){
-        let opcion = "<li>"+ nombre +"</li>"
-        
-        let lista = document.getElementById("lista-nombres");
-        
-        lista.innerHTML += opcion;
-        
-        nombres.push(nombre);
-        
-        alert("Se ha insertado el nombre");
-        
-    }
-    else{
-        alert("Existe el nombre");
-    }
-}
-
-function existeNombre(nombre){
-    for (let i=0; i< nombres.length; i++){
-        const element= nombres[i];
-
-        if  (element.trim().toLowerCase() === nombre.trim().toLowerCase()){
-            return true;
-        }
-    }
-    return false;
-}
+});

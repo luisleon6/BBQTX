@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+}
+html{
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	color: rgb(255, 251, 251);
+	font-family: sans-serif;
+	background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
+										url(../img/fondo.jpg);
+	background-position: center;
+	background-size: cover;
+	font-weight: 300;
+}
+.login-box{
+	position: relative;
+	margin: 10% auto;
+	height: 350px;
+	width: 300px;
+	background: rgba(0,0,0,.4);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
+}
+.left-box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 40px;
+	width: 300px;
+	height: 400px;
+}
+h1{
+	margin-bottom: 20px;
+	font-size: 28px;
+	color: #fff;
+}
+.input-box{
+	display: block;
+	margin-bottom: 20px;
+	padding: 4px;
+	width: 220px;
+	height: 32px;
+	border: 1px solid #fff;
+	outline: none;
+	font-size: 15px;
+	transition: .2s;
+	color: #fff;
+	background: transparent;
+}
+input[type="submit"]{
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	width: 120px;
+	background: #f44336;
+	border: none;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: .2s;
+	padding: 6px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+	background: #ff5722;
+	transition: .2s;
+}
+
+input::placeholder{
+	color:#a7a2a2;
+}
