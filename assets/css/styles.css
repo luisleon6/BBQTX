@@ -1,81 +1,151 @@
-* {
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
+
+.form-group{ margin: 20px 0; }
+input{ height: 30px; width: 100%; padding: 5px; }
+button{ 
+    background: dodgerblue; 
+    color: #fff; 
+    padding: 10px; 
+    border: solid 1px dodgerblue;
+    cursor: pointer;
+}
+
 html{
-	box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+
 body{
-	margin: 0;
-	padding: 0;
-	font-size: 16px;
-	color: rgb(255, 251, 251);
-	font-family: sans-serif;
-	background-image: linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3)),
-										url(../img/fondo.jpg);
-	background-position: center;
-	background-size: cover;
-	font-weight: 300;
-}
-.login-box{
-	position: relative;
-	margin: 10% auto;
-	height: 350px;
-	width: 300px;
-	background: rgba(0,0,0,.4);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, .8);
-}
-.left-box{
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 40px;
-	width: 300px;
-	height: 400px;
-}
-h1{
-	margin-bottom: 20px;
-	font-size: 28px;
-	color: #fff;
-}
-.input-box{
-	display: block;
-	margin-bottom: 20px;
-	padding: 4px;
-	width: 220px;
-	height: 32px;
-	border: 1px solid #fff;
-	outline: none;
-	font-size: 15px;
-	transition: .2s;
-	color: #fff;
-	background: transparent;
-}
-input[type="submit"]{
-	display: block;
-	margin: 0 auto;
-	margin-top: 50px;
-	margin-bottom: 50px;
-	width: 120px;
-	background: #f44336;
-	border: none;
-	color: #fff;
-	text-transform: uppercase;
-	cursor: pointer;
-	transition: .2s;
-	padding: 6px;
+    background: #f7f5ff;
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus{
-	background: #ff5722;
-	transition: .2s;
+header{
+    background: dodgerblue;
+    color: #fff;    
 }
 
-input::placeholder{
-	color:#a7a2a2;
+header #row{
+    height: 50px;
+    padding: 0 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #jumbotron{
+    height: 200px;
+    background: rgb(11, 131, 250);
+    color: white;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+header #brand{
+    flex: 1;
+}
+
+header #menu{
+    margin-right: 20px;
+}
+
+header #menu ul{
+    display: flex;
+    list-style: none;
+}
+
+header #menu ul li{
+    margin: 5px;
+}
+
+header #menu ul li a{
+    height: 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: 5px;
+    color: #ccc;
+}
+
+header #menu ul li a.active{
+    border: solid 1px #fff;
+    color: #fff;
+}
+
+header #menu ul li a:not(.active):hover{
+    background: whitesmoke;
+}
+
+header #account{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+main{
+    flex: 1;
+    margin: 20px 5px;
+}
+
+main #products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 5px;
+}
+
+main #products .card{
+    height: 170px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .2);
+    color: #fff;
+}
+
+main #products .card:first-child{
+    background: tomato;
+}
+
+main #products .card:nth-child(2){
+    background: orange;
+}
+
+main #products .card:nth-child(3){
+    background: rgb(94, 21, 33);
+}
+
+main #products .card:nth-child(4){
+    background: plum;
+}
+
+main #products .card:nth-child(5){
+    background: rgb(25, 109, 67);
+}
+
+main #products .card:last-child{
+    background: royalblue;    
+}
+
+footer{
+    padding: 10px 5px;
+    background: #222;
+    color: #ffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    main #products{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
